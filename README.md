@@ -3,73 +3,88 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Status-In%20Progress-yellow?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Version-v1.0-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Release-Initial%20Architecture-important?style=for-the-badge"/>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Servlets-000000?style=for-the-badge&logo=apachetomcat&logoColor=white"/>
-  <img src="https://img.shields.io/badge/JDBC-007396?style=for-the-badge&logo=java&logoColor=white"/>
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"/>
   <img src="https://img.shields.io/badge/MVC-Architecture-blue?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JSP-View%20Layer-orange?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/JDBC-Data%20Access-007396?style=for-the-badge&logo=java&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
 </p>
 
 ---
 
 ## ⚠️ Note
 
-This project is currently under development and represents **Version 1.0 (Initial Structure)**.
-The current version focuses on setting up the architecture and core flow.
-Further improvements and features will be added in upcoming versions.
+This project is currently under development and represents **Version 1.0 (Initial Architecture Setup)**.
+It is **not the final version**.
+
+The current release focuses on building the system structure using Spring Boot and applying MVC principles.
+Further features and improvements will be implemented in upcoming versions.
 
 ---
 
 ## 📌 Overview
 
-FixNow is a Java-based web application that connects customers with technicians for home services such as plumbing, electricity, and AC repair.
+FixNow is a Java-based web application for home emergency services.
 
-The system is designed following MVC architecture using Servlets, JDBC, and MySQL.
+It connects customers with technicians for services such as:
+
+* Plumbing
+* Electricity
+* AC Repair
+* Locksmith services
+
+The system is designed using **Spring Boot** with a layered MVC-based architecture to ensure clean code separation and scalability.
 
 ---
 
 ##  Architecture
 
-The project follows **MVC + Layered Structure**:
+The project follows **Layered MVC Architecture**:
 
-* Model → Java Classes (Entities)
-* Repository → JDBC (Database Layer)
-* Service → Business Logic
-* Controller → Servlets
-* View → JSP
+* **Controller Layer** → Handles HTTP requests
+* **Service Layer** → Contains business logic
+* **Repository Layer** → Handles database operations (JDBC)
+* **Model Layer** → Represents entities
+* **View Layer** → JSP pages (UI)
 
 ---
 
-## 🔁 System Flow
+##  System Flow
 
 User → JSP → Controller → Service → Repository → Database → Response → JSP
 
 ---
 
-## ⚙️ Technologies Used
+##  Tech Stack
 
 * Java
-* Servlets
+* Spring Boot
+* Maven
+* JSP
 * JDBC
 * MySQL
-* JSP
-* Maven
+* MVC Architecture
 
 ---
 
 ## 📂 Project Structure
 
-```text id="s1m2k9"
+```text
 src/main/java/com/fixnow
 ├── controller
 ├── service
 ├── repo
 ├── model
 └── FixNowApplication.java
+
+src/main/resources
+├── application.properties
 
 src/main/webapp/WEB-INF/jsp
 ├── login.jsp
@@ -79,41 +94,50 @@ src/main/webapp/WEB-INF/jsp
 ├── createRequest.jsp
 ├── viewRequests.jsp
 ├── requestDetails.jsp
-├── addReview.jsp
+└── addReview.jsp
 ```
 
 ---
 
-##  Features
+##  Current Features
 
 * User Registration & Login
-* Create Service Requests
-* Track Request Status
+* Service Request Creation
+* Request Tracking
 * Technician Interaction
-* Review System
+* Review System (structure prepared)
 
 ---
 
 ##  How to Run
 
-1. Import project into Eclipse
-2. Configure Apache Tomcat
-3. Setup MySQL database
-4. Update DBConnection credentials
-5. Run project on server
-
----
-
-##  Future Improvements
-
-* UI Enhancements
-* Input Validation
-* Error Handling
-* Full Integration
-* Additional Features (Payments, Notifications)
+1. Clone the repository
+2. Open in Eclipse or IntelliJ
+3. Configure MySQL database
+4. Update application.properties
+5. Run the Spring Boot application
 
 ---
 
 ##  Release
 
-This repository includes **Version 1.0 (Initial Architecture Setup)**.
+This repository includes **FixNow v1.0 – Initial Architecture Setup**
+
+---
+
+##  Future Improvements
+
+* Complete Service Layer Logic
+* Full Repository Integration
+* UI Enhancements
+* Input Validation
+* Error Handling
+* Full System Integration
+
+---
+
+##  Notes
+
+* This version focuses on architecture, not full functionality
+* The project follows course-based implementation using Spring Boot and MVC
+* Future versions will expand features and improve system performance
