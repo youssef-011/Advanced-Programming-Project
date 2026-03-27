@@ -1,54 +1,119 @@
-# FixNow
+# FixNow – Home Services Web Application
 
-## Overview
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-In%20Progress-yellow?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Version-v1.0-blue?style=for-the-badge"/>
+</p>
 
-FixNow is a web-based platform designed to connect users with nearby technicians for urgent home repair services. The system simplifies the process of requesting emergency maintenance services such as plumbing, electrical repairs, air conditioning maintenance, and locksmith services.
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Servlets-000000?style=for-the-badge&logo=apachetomcat&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JDBC-007396?style=for-the-badge&logo=java&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MVC-Architecture-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white"/>
+</p>
 
-Users can quickly submit service requests and get matched with available technicians who can respond as soon as possible. The goal of the platform is to reduce response time and improve access to reliable home service providers.
+---
 
-## Problem Statement
+## ⚠️ Note
 
-In many cases, finding a reliable technician during a home emergency can be difficult and time-consuming. People often rely on personal contacts or random online searches, which may not provide quick or trustworthy solutions.
+This project is currently under development and represents **Version 1.0 (Initial Structure)**.
+The current version focuses on setting up the architecture and core flow.
+Further improvements and features will be added in upcoming versions.
 
-FixNow aims to solve this problem by providing a centralized platform that connects users with technicians based on service type and availability.
+---
 
-## Project Goals
+## 📌 Overview
 
-* Provide a fast and simple way for users to request home repair services.
-* Connect users with available technicians.
-* Reduce the time needed to find emergency repair services.
-* Provide a reliable and organized platform for home maintenance support.
+FixNow is a Java-based web application that connects customers with technicians for home services such as plumbing, electricity, and AC repair.
 
-## Core Features
+The system is designed following MVC architecture using Servlets, JDBC, and MySQL.
 
-* User registration and login system
-* Technician registration and profile management
-* Emergency service request submission
-* Matching users with available technicians
-* Viewing and tracking service requests
-* Rating and review system
+---
 
-## Technologies
+##  Architecture
 
-The project will be developed using the following technologies:
+The project follows **MVC + Layered Structure**:
+
+* Model → Java Classes (Entities)
+* Repository → JDBC (Database Layer)
+* Service → Business Logic
+* Controller → Servlets
+* View → JSP
+
+---
+
+## 🔁 System Flow
+
+User → JSP → Controller → Service → Repository → Database → Response → JSP
+
+---
+
+## ⚙️ Technologies Used
 
 * Java
-* Java Servlets
-* JDBC (Java Database Connectivity)
-* SQL Database
-* HTML & CSS
+* Servlets
+* JDBC
+* MySQL
+* JSP
+* Maven
 
-## Project Status
+---
 
-The project is currently in the planning phase. The team will begin designing the system structure, database, and application components before starting implementation.
+## 📂 Project Structure
 
-## Team Members
+```text id="s1m2k9"
+src/main/java/com/fixnow
+├── controller
+├── service
+├── repo
+├── model
+└── FixNowApplication.java
 
-| Name            | Student ID |
-| --------------- | ---------- |
-| Youssef Ahmed Zanhome | 241005000  |
+src/main/webapp/WEB-INF/jsp
+├── login.jsp
+├── register.jsp
+├── customerDashboard.jsp
+├── technicianDashboard.jsp
+├── createRequest.jsp
+├── viewRequests.jsp
+├── requestDetails.jsp
+├── addReview.jsp
+```
 
+---
 
-## Repository Purpose
+##  Features
 
-This repository will contain the full development of the FixNow system, including source code, database scripts, and documentation related to the project.
+* User Registration & Login
+* Create Service Requests
+* Track Request Status
+* Technician Interaction
+* Review System
+
+---
+
+##  How to Run
+
+1. Import project into Eclipse
+2. Configure Apache Tomcat
+3. Setup MySQL database
+4. Update DBConnection credentials
+5. Run project on server
+
+---
+
+##  Future Improvements
+
+* UI Enhancements
+* Input Validation
+* Error Handling
+* Full Integration
+* Additional Features (Payments, Notifications)
+
+---
+
+##  Release
+
+This repository includes **Version 1.0 (Initial Architecture Setup)**.
