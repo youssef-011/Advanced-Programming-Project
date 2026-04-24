@@ -2,25 +2,32 @@ package com.fix.fixnow.model;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table(name = "users")
+import java.util.List;
+
+@Entity // da table fel database
+@Table(name = "users") // esm el table fel mysql
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)   // id bytgenerate auto mn DB
     private Long id;
 
     private String name;
 
-    @Column(unique = true)
+    @Column(unique = true, nullable = false) // email lazm unique w msh fady
     private String email;
 
     private String password;
 
-    private String role; // CUSTOMER / TECHNICIAN
+@Enumerated(EnumType.STRING) // role bytb2a string (CUSTOMER / TECHNICIAN)
+    private Role role; // CUSTOMER / TECHNICIAN
 
-    public User() {}
+    @OneToMany(mappedBy = "user") // user wa7ed y3ml kaza request
+    private List<ServiceRequest> requests;
 
-    public User(Long id, String name, String email, String password, String role) {
+    @OneToMany(mappedBy = "user")  // user wa7ed y3ml kaza review
+    private List<Review> reviews;
+
+    public User(Long id, String name, String email, String password, Role role) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -28,11 +35,15 @@ public class User {
         this.role = role;
     }
 
-    public String getRole() {
+    public User() {
+
+    }
+
+    public Role getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(Role role) {
         this.role = role;
     }
 
