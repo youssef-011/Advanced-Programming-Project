@@ -27,7 +27,7 @@ public class CustomerService {
     }
 
     public ServiceRequest createRequest(ServiceRequest request) {
-        request.setStatus("Panding");
+        request.setStatus("Pending");
         return serviceRequestRepo.save(request);
     }
 
